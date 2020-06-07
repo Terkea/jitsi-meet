@@ -166,57 +166,58 @@ class WelcomePage extends AbstractWelcomePage {
 
         return (
             <div
-                className = { `welcome ${showAdditionalContent
-                    ? 'with-content' : 'without-content'}` }
-                id = 'welcome_page'>
-                <div className = 'welcome-watermark'>
-                    <Watermarks />
-                </div>
-                <div className = 'header'>
-                    <div className = 'welcome-page-settings'>
+                className={`welcome ${showAdditionalContent
+                    ? 'with-content' : 'without-content'}`}
+                id='welcome_page'>
+                {/* <div className = 'welcome-watermark'> */}
+                {/* <Watermarks /> */}
+                {/* </div> */}
+                <div className='header'>
+                    <div className='welcome-page-settings'>
                         <SettingsButton
-                            defaultTab = { SETTINGS_TABS.CALENDAR } />
-                        { showAdditionalToolbarContent
+                            defaultTab={SETTINGS_TABS.CALENDAR} />
+                        {showAdditionalToolbarContent
                             ? <div
-                                className = 'settings-toolbar-content'
-                                ref = { this._setAdditionalToolbarContentRef } />
+                                className='settings-toolbar-content'
+                                ref={this._setAdditionalToolbarContentRef} />
                             : null
                         }
                     </div>
-                    <div className = 'header-image' />
-                    <div className = 'header-text'>
-                        <h1 className = 'header-text-title'>
+                    <div className='header-image' />
+                    <div className='header-text'>
+                        {/* <h1 className = 'header-text-title'>
                             { t('welcomepage.title') }
-                        </h1>
-                        <p className = 'header-text-description'>
+                        </h1> */}
+                        {/* <p className = 'header-text-description'>
                             { t('welcomepage.appDescription',
                                 { app: APP_NAME }) }
-                        </p>
+                        </p> */}
                     </div>
-                    <div id = 'enter_room'>
-                        <div className = 'enter-room-input-container'>
-                            <div className = 'enter-room-title'>
-                                { t('welcomepage.enterRoomTitle') }
+                    <div>TEST</div>
+                    <div id='enter_room'>
+                        <div className='enter-room-input-container'>
+                            <div className='enter-room-title'>
+                                {t('welcomepage.enterRoomTitle')}
                             </div>
-                            <form onSubmit = { this._onFormSubmit }>
+                            <form onSubmit={this._onFormSubmit}>
                                 <input
-                                    autoFocus = { true }
-                                    className = 'enter-room-input'
-                                    id = 'enter_room_field'
-                                    onChange = { this._onRoomChange }
-                                    pattern = { ROOM_NAME_VALIDATE_PATTERN_STR }
-                                    placeholder = { this.state.roomPlaceholder }
-                                    ref = { this._setRoomInputRef }
-                                    title = { t('welcomepage.roomNameAllowedChars') }
-                                    type = 'text'
-                                    value = { this.state.room } />
-                                { this._renderInsecureRoomNameWarning() }
+                                    autoFocus={true}
+                                    className='enter-room-input'
+                                    id='enter_room_field'
+                                    onChange={this._onRoomChange}
+                                    pattern={ROOM_NAME_VALIDATE_PATTERN_STR}
+                                    placeholder={this.state.roomPlaceholder}
+                                    ref={this._setRoomInputRef}
+                                    title={t('welcomepage.roomNameAllowedChars')}
+                                    type='text'
+                                    value={this.state.room} />
+                                {this._renderInsecureRoomNameWarning()}
                             </form>
                         </div>
                         <div
-                            className = 'welcome-page-button'
-                            id = 'enter_room_button'
-                            onClick = { this._onFormSubmit }>
+                            className='welcome-page-button'
+                            id='enter_room_button'
+                            onClick={this._onFormSubmit}>
                             {
                                 showResponsiveText
                                     ? t('welcomepage.goSmall')
@@ -224,13 +225,13 @@ class WelcomePage extends AbstractWelcomePage {
                             }
                         </div>
                     </div>
-                    { this._renderTabs() }
+                    {this._renderTabs()}
                 </div>
-                { showAdditionalContent
+                {showAdditionalContent
                     ? <div
-                        className = 'welcome-page-content'
-                        ref = { this._setAdditionalContentRef } />
-                    : null }
+                        className='welcome-page-content'
+                        ref={this._setAdditionalContentRef} />
+                    : null}
             </div>
         );
     }
@@ -242,10 +243,10 @@ class WelcomePage extends AbstractWelcomePage {
      */
     _doRenderInsecureRoomNameWarning() {
         return (
-            <div className = 'insecure-room-name-warning'>
-                <Icon src = { IconWarning } />
+            <div className='insecure-room-name-warning'>
+                <Icon src={IconWarning} />
                 <span>
-                    { this.props.t('security.insecureRoomNameWarning') }
+                    {this.props.t('security.insecureRoomNameWarning')}
                 </span>
             </div>
         );
@@ -325,11 +326,8 @@ class WelcomePage extends AbstractWelcomePage {
             return null;
         }
 
-        return (
-            <Tabs
-                onSelect = { this._onTabSelected }
-                selected = { this.state.selectedTab }
-                tabs = { tabs } />);
+        // Remove the prev rooms list
+        return null;
     }
 
     /**
