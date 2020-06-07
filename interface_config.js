@@ -28,7 +28,7 @@ var interfaceConfig = {
     GENERATE_ROOMNAMES_ON_WELCOME_PAGE: true,
     DISPLAY_WELCOME_PAGE_CONTENT: true,
     DISPLAY_WELCOME_PAGE_TOOLBAR_ADDITIONAL_CONTENT: false,
-    APP_NAME: 'Jitsi Meet',
+    APP_NAME: 'muie',
     NATIVE_APP_NAME: 'Jitsi Meet',
     PROVIDER_NAME: 'Jitsi',
     LANG_DETECTION: true, // Allow i18n to detect the system language
@@ -48,14 +48,14 @@ var interfaceConfig = {
      */
     TOOLBAR_BUTTONS: [
         'microphone', 'camera', 'closedcaptions', 'desktop', 'fullscreen',
-        'fodeviceselection', 'hangup', 'profile', 'chat', 'recording',
-        'livestreaming', 'etherpad', 'sharedvideo', 'settings', 'raisehand',
-        'videoquality', 'filmstrip', 'invite', 'feedback', 'stats', 'shortcuts',
-        'tileview', 'videobackgroundblur', 'download', 'help', 'mute-everyone',
+        'fodeviceselection', 'hangup', 'chat', 'recording',
+        'etherpad', 'sharedvideo',
+        'videoquality', 'filmstrip',
+        'tileview', 'download', 'help', 'mute-everyone',
         'e2ee', 'security'
     ],
 
-    SETTINGS_SECTIONS: [ 'devices', 'language', 'moderator', 'profile', 'calendar' ],
+    SETTINGS_SECTIONS: ['devices', 'language', 'moderator', 'profile', 'calendar'],
 
     // Determines how the video would fit the screen. 'both' would fit the whole
     // screen, 'height' would fit the original video height to the height of the
@@ -176,7 +176,7 @@ var interfaceConfig = {
     // has a suboptimal experience. Browsers which are not listed as optimal or
     // unsupported are considered suboptimal. Valid values are:
     // chrome, chromium, edge, electron, firefox, nwjs, opera, safari
-    OPTIMAL_BROWSERS: [ 'chrome', 'chromium', 'firefox', 'nwjs', 'electron', 'safari' ],
+    OPTIMAL_BROWSERS: ['chrome', 'chromium', 'firefox', 'nwjs', 'electron', 'safari'],
 
     // Browsers, in addition to those which do not fully support WebRTC, that
     // are not supported and should show the unsupported browser page.

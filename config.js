@@ -162,7 +162,7 @@ var config = {
 
     // The media sources to use when using screen sharing with the Chrome
     // extension.
-    desktopSharingChromeSources: [ 'screen', 'window', 'tab' ],
+    desktopSharingChromeSources: ['screen', 'window', 'tab'],
 
     // Required version of Chrome extension
     desktopSharingChromeMinExtVersion: '0.1',
@@ -182,16 +182,18 @@ var config = {
     // Recording
 
     // Whether to enable file recording or not.
-    // fileRecordingsEnabled: false,
+    fileRecordingsEnabled: true,
+
     // Enable the dropbox integration.
-    // dropbox: {
-    //     appKey: '<APP_KEY>' // Specify your app key here.
-    //     // A URL to redirect the user to, after authenticating
-    //     // by default uses:
-    //     // 'https://jitsi-meet.example.com/static/oauth.html'
-    //     redirectURI:
-    //          'https://jitsi-meet.example.com/subfolder/static/oauth.html'
-    // },
+    dropbox: {
+        appKey: 'rvl7hdK1AEAAAAAAAAAAG6kpB783YDayEmvWnZRhx5gHHxOzTvZcODW6JmtLdUx8' // Specify your app key here.
+        // A URL to redirect the user to, after authenticating
+        // by default uses:
+        // 'https://jitsi-meet.example.com/static/oauth.html'
+        // redirectURI:
+        //     'https://jitsi-meet.example.com/subfolder/static/oauth.html'
+    },
+
     // When integrations like dropbox are enabled only that will be shown,
     // by enabling fileRecordingsServiceEnabled, we show both the integrations
     // and the generic recording service (its configuration and storage type
@@ -284,7 +286,7 @@ var config = {
 
     // Whether to use a welcome page or not. In case it's false a random room
     // will be joined when no room is specified.
-    enableWelcomePage: true,
+    enableWelcomePage: false,
 
     // Enabling the close page will ignore the welcome page redirection when
     // a call is hangup.
@@ -443,20 +445,20 @@ var config = {
     // Local Recording
     //
 
-    // localRecording: {
-    // Enables local recording.
-    // Additionally, 'localrecording' (all lowercase) needs to be added to
-    // TOOLBAR_BUTTONS in interface_config.js for the Local Recording
-    // button to show up on the toolbar.
-    //
-    //     enabled: true,
-    //
+    localRecording: {
+        // Enables local recording.
+        // Additionally, 'localrecording' (all lowercase) needs to be added to
+        // TOOLBAR_BUTTONS in interface_config.js for the Local Recording
+        // button to show up on the toolbar.
+        //
+        enabled: true,
+        //
 
-    // The recording format, can be one of 'ogg', 'flac' or 'wav'.
-    //     format: 'flac'
-    //
+        // The recording format, can be one of 'ogg', 'flac' or 'wav'.
+        format: 'flac'
+        //
 
-    // },
+    },
 
     // Options related to end-to-end (participant to participant) ping.
     // e2eping: {
@@ -488,7 +490,7 @@ var config = {
     // Mainly privacy related settings
 
     // Disables all invite functions from the app (share, invite, dial out...etc)
-    // disableInviteFunctions: true,
+    disableInviteFunctions: true,
 
     // Disables storing the room name to the recents list
     // doNotStoreRoom: true,
